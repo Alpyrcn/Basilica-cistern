@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
         if (characterController.isGrounded)
         {
-            direction.y = -1;
+            //direction.y = 0;
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
             {
                 Jump();
@@ -67,10 +67,10 @@ public class PlayerController : MonoBehaviour
             
         }
 
-        /* Smoothness (not working)
-        transform.position = Vector3.Lerp(transform.position, targetPosition, 80 * Time.deltaTime);
-        */
-        transform.position = targetPosition;
+         //Smoothness (not working)
+        transform.position = Vector3.Lerp(transform.position, targetPosition, 10 * Time.deltaTime);
+        characterController.center = characterController.center;
+        //transform.position = targetPosition;
         
     }
 

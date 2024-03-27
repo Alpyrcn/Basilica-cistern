@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TileManager : MonoBehaviour
 {
-
+    // Create a new empty game object
     public GameObject[] tilePrefabs;
     public float zSpawn = 0;
-    public float tileLength = 8;
+    public float tileLength = 8; //units 
     public int numberOftiles = 5;
 
     private List<GameObject> activeTiles = new List<GameObject>();
@@ -27,7 +27,8 @@ public class TileManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerTransform.position.z -8 > zSpawn - (numberOftiles * tileLength))
+        //Delete tiles 
+        if(playerTransform.position.z -8 > zSpawn - (numberOftiles * tileLength)) // playerTransform.position.z - units/2(scale)
         {
             SpawnTile(Random.Range(0, tilePrefabs.Length));
             DeleteTile();
