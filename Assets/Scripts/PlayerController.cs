@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController characterController;
+    private Animator animator;
     private Vector3 direction;
     public float forwardSpeed;
-
+    public float maxSpeed;
     private int desiredline = 1; //0:Left 1:Center 2:Right
     public float lineDistance = 4; //the distance between two lines 
 
@@ -23,7 +24,16 @@ public class PlayerController : MonoBehaviour
     {
         direction.z = forwardSpeed;
 
-        
+        //Increase speed
+        if(forwardSpeed < maxSpeed)
+            forwardSpeed += 0.1f * Time.deltaTime;
+
+
+        if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Slide();
+        }
+
 
         if (characterController.isGrounded)
         {
@@ -82,5 +92,20 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         direction.y = JumpForce;
+    }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.transform.tag == "Obstacle")
+        {
+            PlayerManager.gameover = true;
+        }
+    }
+    private IEnumerable Slide()
+    {
+        animator.SetBool("IsSliding", true);
+
+        yield return new WaitForSeconds(1.3f);
+
+        animator.SetBool("IsSliding", false);
     }
 }
