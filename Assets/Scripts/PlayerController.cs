@@ -1,11 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private CharacterController characterController;
-    private Animator animator;
     private Vector3 direction;
     public float forwardSpeed;
     public float maxSpeed;
@@ -14,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     public float JumpForce;
     public float Gravity =-20;
+    public Animator anim;
     void Start()
     {
         characterController = this.GetComponent<CharacterController>();
@@ -22,7 +21,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!PlayerManager.isGameStarted)
+            return;
+        anim.SetBool("isGameStarted", true);
         direction.z = forwardSpeed;
+
+        
 
         //Increase speed
         if(forwardSpeed < maxSpeed)
@@ -31,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Slide();
+            StartCoroutine(Slide());
         }
 
 
@@ -40,6 +44,7 @@ public class PlayerController : MonoBehaviour
             //direction.y = 0;
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
             {
+                anim.SetBool("isGrounded", true);
                 Jump();
             }
         }
@@ -77,7 +82,7 @@ public class PlayerController : MonoBehaviour
             
         }
 
-         //Smoothness (not working)
+         
         transform.position = Vector3.Lerp(transform.position, targetPosition, 10 * Time.deltaTime);
         characterController.center = characterController.center;
         //transform.position = targetPosition;
@@ -100,12 +105,15 @@ public class PlayerController : MonoBehaviour
             PlayerManager.gameover = true;
         }
     }
-    private IEnumerable Slide()
+    private IEnumerator Slide()
     {
-        animator.SetBool("IsSliding", true);
-
+        anim.SetBool("isSliding", true);
+        characterController.center = new Vector3(0, -0.5f, 0);
+        characterController.height = 1f;
         yield return new WaitForSeconds(1.3f);
 
-        animator.SetBool("IsSliding", false);
+        characterController.center = new Vector3(0, 0, 0);
+        characterController.height = 3;
+        anim.SetBool("isSliding", false);
     }
 }
