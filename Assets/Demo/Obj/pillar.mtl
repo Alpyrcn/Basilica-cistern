@@ -1,18 +1,13 @@
+# Blender 4.1.1 MTL File: 'None'
+# www.blender.org
+
 newmtl Union1Mtl
-Material Color
-Ka 0.124741 0.113921 0.121986
-Kd 0.124741 0.113921 0.121986
-Ks 0.0146754 0.0134025 0.0143513 
-
-d 1
-
-Ns 0
-
-map_Ka Union1_diff.png
+Ka 1.000000 1.000000 1.000000
+Ks 0.014143 0.014143 0.014143
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
 map_Kd Union1_diff.png
-map_d Union1_diff.png
-
-map_Bump Union1_nmap.png
-
 map_Ns Union1_spec.png
-
+map_d Union1_diff.png
+map_Bump Union1_nmap.png
