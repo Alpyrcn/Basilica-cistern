@@ -13,7 +13,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -21,6 +21,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Foam_Tex:
+        m_Texture: {fileID: 2800000, guid: 0f704cca3a3abc247a5675c41c336621, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 2800000, guid: 316c6af3539f86b42ab27d7878a8dc64, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -43,16 +47,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Depth: -7
-    - _Lerp: 0.2
+    - _Depth: 0
+    - _Depth_Fade: -10
+    - _Foam: 1.5
+    - _Foam_scale: 500
+    - _Lerp: 0.277
     - _NormalStrength: 2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Reflection_Refraction: 0.1
-    - _Refraction: 0.005
-    - _Smoothness: 0.5
+    - _Refraction: 1.33
+    - _Smoothness: 0.7
     - _WaterLerp: 0.7
+    - _Water_Level: 0
+    - _Wave: 0
     m_Colors:
+    - _Albedo: {r: 1, g: 1, b: 1, a: 0}
+    - _Foam_Color: {r: 1, g: 1, b: 1, a: 0}
     - _UV1: {r: 80, g: 80, b: 5, a: 0}
     - _UV2: {r: 120, g: 120, b: 5, a: 0}
     - _WaterSpeed1: {r: 0.05, g: 0.05, b: 0, a: 0}
