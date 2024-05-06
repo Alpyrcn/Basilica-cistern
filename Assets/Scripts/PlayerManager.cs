@@ -9,6 +9,10 @@ public class PlayerManager : MonoBehaviour
     public GameObject startingText;
     public static bool isGameStarted;
     public static int numberOfcoins;
+    private bool isPanelOpen = false;
+    public GameObject panel;
+
+
     public Text coin;
     void Start()
     {
@@ -33,5 +37,31 @@ public class PlayerManager : MonoBehaviour
             Time.timeScale = 1;
             Destroy(startingText);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPanelOpen)
+            {
+                ClosePanel();
+            }
+            else
+            {
+                OpenPanel();
+            }
+        }
+    }
+
+    public void OpenPanel()
+    {
+        panel.SetActive(true);
+        Time.timeScale = 0f;
+        isPanelOpen = true;
+    }
+
+    public void ClosePanel()
+    {
+        panel.SetActive(false);
+        Time.timeScale = 1f;
+        isPanelOpen = false;
     }
 }

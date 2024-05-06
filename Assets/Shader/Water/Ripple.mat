@@ -35,7 +35,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Main_tex:
-        m_Texture: {fileID: 2800000, guid: d720baa413343cb49aa93db285523b30, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0f704cca3a3abc247a5675c41c336621, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_5672b0ffd2514a1f84c03b02138ec644_Out_0:
@@ -62,7 +62,7 @@ Material:
     - _RippleSpeed: 1
     - _RippleStrength: 1
     - _RipplesCount: 4
-    - _Scale: 0
+    - _Scale: 10
     m_Colors:
     - _RippleCenter: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
