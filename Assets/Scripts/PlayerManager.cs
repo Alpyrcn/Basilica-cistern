@@ -29,9 +29,10 @@ public class PlayerManager : MonoBehaviour
         {
             Time.timeScale = 0;
             gameoverscreen.SetActive(true);
+
         }
         coin.text = "" + numberOfcoins;
-        if (Input.anyKey)
+        if (Input.GetKeyDown(KeyCode.F))
         {
             isGameStarted = true;
             Time.timeScale = 1;
@@ -43,10 +44,13 @@ public class PlayerManager : MonoBehaviour
             if (isPanelOpen)
             {
                 ClosePanel();
+                Time.timeScale = 1;
             }
             else
             {
+                
                 OpenPanel();
+                Time.timeScale = 0;
             }
         }
     }
@@ -54,14 +58,12 @@ public class PlayerManager : MonoBehaviour
     public void OpenPanel()
     {
         panel.SetActive(true);
-        Time.timeScale = 0f;
         isPanelOpen = true;
     }
 
     public void ClosePanel()
     {
         panel.SetActive(false);
-        Time.timeScale = 1f;
         isPanelOpen = false;
     }
 }

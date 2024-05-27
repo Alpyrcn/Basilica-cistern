@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController characterController;
     private Vector3 direction;
-    public float forwardSpeed;
+    public float forwardSpeed = 8;
     public float maxSpeed;
     private int desiredline = 1; //0:Left 1:Center 2:Right
     public float lineDistance = 4; //the distance between two lines 

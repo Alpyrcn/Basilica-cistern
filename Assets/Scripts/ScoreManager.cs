@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour
     public Text scoreText;
     public static float scoreCount;
     public Text hiScoreText;
+    public PlayerController playercont;
     public static int hiScoreCount;
     void Start()
     {
@@ -35,7 +36,7 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore()
     {
-        scoreCount += 2 * Time.deltaTime; 
+        scoreCount += /*playercont.forwardSpeed*/ 2 * Time.deltaTime; 
     }
 
 

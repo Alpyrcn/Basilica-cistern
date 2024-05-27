@@ -578,9 +578,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595277397}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -1.1343342, y: -0.206, z: 1.7650776}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -6.37, y: -1.91, z: 1.7650776}
+  m_LocalScale: {x: 4.4, y: 4.4, z: 4.4}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -741,7 +741,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 50, y: 30, z: 0}
 --- !u!1 &714894950
 GameObject:
@@ -1131,10 +1131,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1167635904}
+        m_TargetAssemblyTypeName: SoundUI, Assembly-CSharp
+        m_MethodName: SFXVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &804085005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,10 +1446,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1167635904}
+        m_TargetAssemblyTypeName: SoundUI, Assembly-CSharp
+        m_MethodName: MusicVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &873167153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2263,6 +2287,7 @@ GameObject:
   - component: {fileID: 1167635900}
   - component: {fileID: 1167635899}
   - component: {fileID: 1167635903}
+  - component: {fileID: 1167635904}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2371,6 +2396,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 91228377}
   hiScoreText: {fileID: 873167155}
+  playercont: {fileID: 0}
+--- !u!114 &1167635904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167635898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13de686b6902d874baded6345f31b1e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _musicslider: {fileID: 869531055}
+  _sfxslider: {fileID: 803987255}
 --- !u!1 &1259594033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,7 +2680,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press any button to start
+  m_text: Press "F" button to start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2649,8 +2689,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294941184
-  m_fontColor: {r: 0, g: 0.60495615, b: 1, a: 1}
+    rgba: 4294902004
+  m_fontColor: {r: 0.9577093, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3346,7 +3386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800061043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3439,8 +3479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSounds:
-  - sfxname: 
-    clip: {fileID: 0}
+  - sfxname: Theme
+    clip: {fileID: 8300000, guid: 5a83f95084ca15f4e85540a2f3a5f127, type: 3}
   sfxSound: []
   MusicSource: {fileID: 919296828}
   sfxSource: {fileID: 1638692667}
@@ -3890,7 +3930,7 @@ PrefabInstance:
     - target: {fileID: 2181419176063231266, guid: 827d90dd3a064b44a934a8291a79e9d8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2181419176063231266, guid: 827d90dd3a064b44a934a8291a79e9d8,
         type: 3}
@@ -3955,7 +3995,7 @@ PrefabInstance:
     - target: {fileID: 2181419176063231269, guid: 827d90dd3a064b44a934a8291a79e9d8,
         type: 3}
       propertyPath: tilePrefabs.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2181419176063231269, guid: 827d90dd3a064b44a934a8291a79e9d8,
         type: 3}
@@ -3986,6 +4026,18 @@ PrefabInstance:
       propertyPath: tilePrefabs.Array.data[4]
       value: 
       objectReference: {fileID: 3827323723295141501, guid: aee203e93dcfe604b92e466300af7ba0,
+        type: 3}
+    - target: {fileID: 2181419176063231269, guid: 827d90dd3a064b44a934a8291a79e9d8,
+        type: 3}
+      propertyPath: tilePrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 9072877221669917819, guid: 286f6cbb20705614c8babaf6a14b2a81,
+        type: 3}
+    - target: {fileID: 2181419176063231269, guid: 827d90dd3a064b44a934a8291a79e9d8,
+        type: 3}
+      propertyPath: tilePrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 4851483509740316222, guid: b543e40b96f28d44ab64b828dbe237ae,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 827d90dd3a064b44a934a8291a79e9d8, type: 3}
