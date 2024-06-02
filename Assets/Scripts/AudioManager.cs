@@ -27,6 +27,11 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayMusic("Theme");
+        if (!PlayerManager.isGameStarted)
+        {
+            PlaySFX("Scream");
+            Debug.Log("Scream");
+        }
     }
 
 

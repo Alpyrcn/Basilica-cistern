@@ -1,0 +1,24 @@
+# Blender 4.1.1 MTL File: 'None'
+# www.blender.org
+
+newmtl Part1Mtl
+Ka 1.000000 1.000000 1.000000
+Ks 0.078739 0.078739 0.078739
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd Part1_diff.png
+map_Ns Part1_spec.png
+map_d Part1_diff.png
+map_Bump Part1_nmap.png
+
+newmtl Part3Mtl
+Ka 1.000000 1.000000 1.000000
+Ks 0.080144 0.080144 0.080144
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd Part1_diff.png
+map_Ns Part1_spec.png
+map_d Part1_diff.png
+map_Bump Part1_nmap.png

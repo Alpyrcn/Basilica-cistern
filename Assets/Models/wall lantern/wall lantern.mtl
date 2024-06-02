@@ -1,0 +1,23 @@
+# Blender 4.1.1 MTL File: 'None'
+# www.blender.org
+
+newmtl Lantern1Mtl
+Ns 255.000015
+Ka 1.000000 1.000000 1.000000
+Ks 0.666667 0.666667 0.666667
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd Lantern1_diff.png
+map_d Lantern1_diff.png
+
+newmtl Union1Mtl
+Ka 1.000000 1.000000 1.000000
+Ks 0.001724 0.001724 0.001724
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd Union1_diff.png
+map_Ns Union1_spec.png
+map_d Union1_diff.png
+map_Bump Union1_nmap.png

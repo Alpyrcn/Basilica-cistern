@@ -47,16 +47,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Depth: 15
-    - _Depth_Fade: -10
-    - _Foam: 1
+    - _Depth: 4
+    - _Depth_Fade: -12
+    - _Foam: 2
     - _Foam_scale: 250
     - _Lerp: 0.277
     - _NormalStrength: 1.5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Reflection_Refraction: 0.1
-    - _Refraction: 100
+    - _Refraction: 1
     - _Smoothness: 0.7
     - _WaterLerp: 0.5
     - _Water_Level: 0
@@ -64,8 +64,8 @@ Material:
     m_Colors:
     - _Albedo: {r: 1, g: 1, b: 1, a: 0}
     - _Foam_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _UV1: {r: 80, g: 80, b: 5, a: 0}
-    - _UV2: {r: 120, g: 120, b: 5, a: 0}
+    - _UV1: {r: 800, g: 800, b: 5, a: 0}
+    - _UV2: {r: 1200, g: 1200, b: 5, a: 0}
     - _WaterSpeed1: {r: 0.005, g: 0.05, b: 0, a: 0}
     - _WaterSpeed2: {r: -0.05, g: -0.005, b: 0, a: 0}
   m_BuildTextureStacks: []

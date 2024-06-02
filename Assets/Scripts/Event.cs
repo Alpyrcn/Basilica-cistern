@@ -7,7 +7,7 @@ public class Event : MonoBehaviour
 {
     public void RetryLevel()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Runner");
     }
 
     public void QuitGame()

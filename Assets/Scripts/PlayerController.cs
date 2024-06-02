@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float JumpForce;
     public float Gravity =-20;
     public Animator anim;
+    public AudioManager audio;
     void Start()
     {
         characterController = this.GetComponent<CharacterController>();
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetBool("isGrounded", true);
                 Jump();
+                
             }
         }
         else
