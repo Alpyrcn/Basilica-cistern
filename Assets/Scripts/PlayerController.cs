@@ -110,9 +110,9 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Slide()
     {
         anim.SetBool("isSliding", true);
-        characterController.center = new Vector3(0, -0.5f, 0);
+        characterController.center = new Vector3(0, -1f, 0);
         characterController.height = 1f;
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(1f);
 
         characterController.center = new Vector3(0, 0, 0);
         characterController.height = 3;

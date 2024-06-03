@@ -1,0 +1,33 @@
+# Blender 4.1.1 MTL File: 'None'
+# www.blender.org
+
+newmtl PoliceSign1Mtl
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.010398 0.116576
+Ks 0.002656 0.002656 0.002656
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl PoliceSign2Mtl
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.062745 0.062745 0.062745
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd PoliceSign2_diff.png
+map_d PoliceSign2_diff.png
+
+newmtl Union1Mtl
+Ka 1.000000 1.000000 1.000000
+Ks 0.544998 0.544998 0.544998
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd Union1_diff.png
+map_Ns Union1_spec.png
+map_d Union1_diff.png
+map_Bump Union1_nmap.png
