@@ -57,7 +57,7 @@ Material:
     - _QueueOffset: 0
     - _Reflection_Refraction: 0.1
     - _Refraction: 1
-    - _Smoothness: 0.7
+    - _Smoothness: 1
     - _WaterLerp: 0.5
     - _Water_Level: 0
     - _Wave: 0

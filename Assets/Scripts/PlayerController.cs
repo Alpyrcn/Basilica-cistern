@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
             //direction.y = 0;
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
             {
-                anim.SetBool("isGrounded", true);
+                anim.SetBool("isGrounded", false);
                 Jump();
                 
             }
@@ -53,6 +53,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             direction.y += Gravity * Time.deltaTime;
+        }
+
+        if (!characterController.isGrounded)
+        {
+            anim.SetBool("isGrounded", true);
         }
         //Gather the input on which line we should be 
         if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
@@ -116,6 +121,7 @@ public class PlayerController : MonoBehaviour
 
         characterController.center = new Vector3(0, 0, 0);
         characterController.height = 3;
+        
         anim.SetBool("isSliding", false);
     }
 }
